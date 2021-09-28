@@ -5,7 +5,7 @@ public class Terningeprojektet {
     public static void main (String[] args) {
 
         int die1, die2, sumtotal1=0, sum1, sumtotal2=0, sum2;
-        String player1, player2;
+
         do {
             do {
                 Random rand = new Random();
