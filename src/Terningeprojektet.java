@@ -42,7 +42,7 @@ public class Terningeprojektet {
                 System.out.println();
 
             } while (die1 == die2);
-        } while (sumtotal1 <= 40 || sumtotal2 <= 40);
+        } while (sumtotal1 <= 40 && sumtotal2 <= 40);
 // do og while loop der skal stoppe når en rammer 40 virker ikke endnu. Den stopper først når
 // har ramt 40 pt.
 
