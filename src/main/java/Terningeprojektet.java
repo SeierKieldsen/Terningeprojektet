@@ -1,3 +1,4 @@
+package main.java;
 
 import java.util.Random;
 
@@ -11,8 +12,9 @@ public class Terningeprojektet {
 3.  evt reset på "en knap"
 4. vise hvis tur det er i konsollen
 5. evt flere af de "ekstra krav"
-6. fixes med outprint ved point, ser forvirrende ud med 1: 1 fx.
+6. fixes med outprint ved point, ser forvirrende ud med 1: 1 fx. /FIXET
 7. printe ud ved uafgjort, "its a tie" det kan ske jeg har set det ske :D /FIXET
+8. Farve på player (Rød & Blå f.eks.)
  */
         do {
             do {
@@ -20,7 +22,8 @@ public class Terningeprojektet {
                 die1 = rand.nextInt(6) + 1;
                 die2 = rand.nextInt(6) + 1;
 
-                System.out.println("P1 Terning 1: " + die1 + " P1 Terning 2: " + die2);
+                System.out.println("Player 1               Terning 1: " + "Terning 2: ");
+                System.out.println("                          " + die1 + "          " + die2);
 
                 sum1 = (int) Math.floor(die1 + die2);
 
@@ -37,7 +40,8 @@ public class Terningeprojektet {
                 die1 = rand.nextInt(6) + 1;
                 die2 = rand.nextInt(6) + 1;
 
-                System.out.println("P2 2 terning 1: " + die1 + " P2 Terning 2: " + die2);
+                System.out.println("Player 2              Terning 1: " + "Terning 2: ");
+                System.out.println( "                          " + die1 + "          " + die2);
 
                 sum2 = (int) Math.floor(die1 + die2);
 
