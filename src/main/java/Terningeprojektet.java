@@ -6,6 +6,14 @@ public class Terningeprojektet {
 
         int die1, die2, sumtotal1=0, sum1, sumtotal2=0, sum2;
 
+/* 1. vi skal have lavet så man trykker S for at slå ikke "s og enter"
+2.så skal der vises, hvilken spiller der vinder. /FIXET
+3.  evt reset på "en knap"
+4. vise hvis tur det er i konsollen
+5. evt flere af de "ekstra krav"
+6. fixes med outprint ved point, ser forvirrende ud med 1: 1 fx.
+7. printe ud ved uafgjort, "its a tie" det kan ske jeg har set det ske :D /FIXET
+ */
         do {
             do {
                 Random rand = new Random();
@@ -42,9 +50,16 @@ public class Terningeprojektet {
                 System.out.println();
 
             } while (die1 == die2 && sumtotal2 < 40);
-        } while (sumtotal1 <= 40 && sumtotal2 <= 40);
-// do og while loop der skal stoppe når en rammer 40 virker ikke endnu. Den stopper først når
-// har ramt 40 pt.
-
+        } while (sumtotal1 < 40 && sumtotal2 < 40);
+// Det er fixet, med sidste runde ved 40 point, og ikke ekstra runde ved dobbeltslag når man har 40.
+        if (sumtotal1 < sumtotal2) {
+            System.out.println("player 2 won");
+        }
+        if (sumtotal1 > sumtotal2) {
+            System.out.println("player 1 won");
+        }
+        if (sumtotal1 == sumtotal2) {
+            System.out.println("Its a tie");
+        }
     }
 }
