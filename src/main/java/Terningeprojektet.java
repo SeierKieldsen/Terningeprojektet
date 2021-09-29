@@ -8,7 +8,10 @@ public class Terningeprojektet {
         int die1, die2, sumtotal1=0, sum1, sumtotal2=0, sum2;
         final String TEXT_RESET = "\u001B[0m";
         final String TEXT_RED = "\u001B[31m";
+        final String RED_BOLD = "\033[1;91m";
         final String TEXT_BLUE = "\u001B[34m";
+        final String BLUE_BOLD = "\033[1;94m";
+        final String GREEN_BOLD = "\033[1;92m";
 
 /* 1. vi skal have lavet så man trykker S for at slå ikke "s og enter"
 2.så skal der vises, hvilken spiller der vinder. /FIXET
@@ -60,10 +63,10 @@ public class Terningeprojektet {
         } while (sumtotal1 < 40 && sumtotal2 < 40);
 // Det er fixet, med sidste runde ved 40 point, og ikke ekstra runde ved dobbeltslag når man har 40.
         if (sumtotal1 < sumtotal2) {
-            System.out.println(TEXT_BLUE + "player 2 won");
+            System.out.println(BLUE_BOLD + "Player 2 won with: " + TEXT_RESET + GREEN_BOLD + sumtotal2 + " Points");
         }
         if (sumtotal1 > sumtotal2) {
-            System.out.println(TEXT_RED + "player 1 won");
+            System.out.println(RED_BOLD + "Player 1 won with: " + TEXT_RESET + GREEN_BOLD + sumtotal1 + " Points");
         }
         if (sumtotal1 == sumtotal2) {
             System.out.println("Its a tie");
